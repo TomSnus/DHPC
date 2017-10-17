@@ -8,12 +8,15 @@ public class Paralell {
         m.print();
         for(int i = 0; i < m.x; i++){
             for(int j = 0; j < m.y; j++){
-                for(int k = 0; k < 1000; k++){
+                for(int k = 0; k < 1000000000; k++){
                     m.set(i,j, Math.pow(Math.E, Math.log(m.get(i,j))));
                 }
             }
 
         }
+
+        m.process(new SquareComputer());
+
         System.out.println();
         m.print();
 

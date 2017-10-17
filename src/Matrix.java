@@ -33,8 +33,12 @@ public class Matrix  {
     }
 
 
-    public void process(Function f){
-
+    public void process(Funktion f){
+        for (int i = 0; i < y; i++) {
+            for(int j = 0; j < x; j++){
+                set(j, i, f.compute(get(j,i)));
+            }
+        }
 
     }
 
